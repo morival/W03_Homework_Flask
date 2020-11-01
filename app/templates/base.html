@@ -4,16 +4,22 @@
       <title>{{ title }} - Rock Paper Scissors</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li class="navLink"><a href="/">Home</a></li>
-                <li class="navLink"><a href="/play-yrs">Play</a></li>
-                <li class="navLink"><a href="/play-cpu">Play Computer</a></li>
-            </ul>
-        </nav>
+        <header>
+            <nav>
+                <ul>
+                    <li class="navLink"><a href="/">About</a></li>
+                    <li class="navLink"><a href="/play-yrs">Play vs Player</a></li>
+                    <li class="navLink"><a href="/play-cpu">Play vs Computer</a></li>
+                </ul>
+            </nav>
+            <h1>Rock Paper Scissors</h1>
+        </header>
         <hr>
-        <h1>Rock Paper Scissors</h1>
-        <hr>
+        <main>
         {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <div class="footer"></div>
+        </footer>
     </body>
 </html>

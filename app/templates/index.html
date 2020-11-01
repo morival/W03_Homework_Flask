@@ -1,30 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<hr>
-<form action="/play-rps" method="POST">
-    <section>
-        <label for="player1">Player 1</label>
-        <input type="text" name="player1" value="Player 1" id="player1">
-        <select name="choice1" id="choice1">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
-        </select>
-    </section>
-    <section>
-        <label for="player2">Player 2</label>
-        <input type="text" name="player2" value="Player 2" id="player2">
-        <select name="choice2" id="choice2">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
-        </select>
-    </section>
-    <input type="submit" value="Play!">
-</form>
-<div class="result-container">
-    <h2>{{ reply }}</h2>
+<div class="container">
+    <form action="/play-rps" method="POST">
+        <section>
+            <label for="player1">Player 1 Name</label>
+            <input class="player-input" type="text" name="player1" value="Player 1" id="player1">
+            <select name="choice1" id="choice1">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </section>
+        <section>
+            <label for="player2">Player 2 Name</label>
+            <input class="player-input" type="text" name="player2" value="Player 2" id="player2">
+            <select name="choice2" id="choice2">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </section>
+        <input class="btn" type="submit" value="Play!">
+    </form>
+    <div class="result-container">
+        <h2>{{ reply }}</h2>
+    </div>
 </div>
 {% endblock %}
