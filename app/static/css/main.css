@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(189, 220, 230);
+    margin:0;
+}
+body > nav {
+    background-color: beige;
+    padding: 2px;
+}
+body > nav > ul {
+    display: flex;
+}
+body > nav > ul > li {
+    margin: 4px;
+    background-color: gray;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 2px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+body > nav > ul > li:hover{
+    background-color: darkgray;
+}
+body > nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: large;
+}
+body > h1 {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+section {
+    margin: 20px;
+}

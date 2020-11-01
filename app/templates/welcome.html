@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h4> You beat another player if your choice "beats" theirs in the following way:</h4>
+<ul>
+    <li>Rock beats Scissors</li>
+    <li>Scissors beat Paper</li>
+    <li>Paper beats Rock</li>
+</ul>
+<h4>Otherwise, it is a tie.</h4>
+<form action="/play-yrs" method="GET">
+    <input type="submit" value="Play Against Yourself">
+</form>
+<h4>Or...</h4>
+<form action="/play-cpu" method="GET">
+    <input type="submit" value="Play Against Computer">
+</form>
+{% endblock %}

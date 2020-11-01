@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<hr>
+<form action="/play-rps-cpu" method="POST">
+    <label for="player1">Player 1</label>
+    <input type="text" name="player1" value="Player 1" id="player1">
+    <select name="choice1" id="choice1">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <input type="submit" value="Play!">
+</form>
+<span>Computer</span>
+<div class="result-container">
+    <h2>{{ reply }}</h2>
+</div>
+{% endblock %}
