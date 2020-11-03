@@ -19,6 +19,23 @@ class Game:
 
     def tie(self):
         return "Tie Game!"
+
+
+    def clip_path(self, player):
+        clip_table = ["7% 67% 27% 0%", "24% 33.55% 10% 34%", "7% 2% 27% 65%" ]
+        cp = clip_table[self.player_move(player.choice)]
+        return cp
+
+    def margin_left(self, player):
+        ml_table = ["-4px", "-248px", "-500px"]
+        ml = ml_table[self.player_move(player.choice)]
+        return ml
+
+    def margin_top(self, player):
+        mt_table = ["-13px", "-70px", "-13px"]
+        mt = mt_table[self.player_move(player.choice)]
+        return mt
+        
         
     def play_new_game(self, player1, player2):
         

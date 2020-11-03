@@ -21,7 +21,14 @@ def play_rps():
     player2 = Player(request.form['player2'], request.form['choice2'])
     game = Game(player1, player2)
     reply = game.play_new_game(player1, player2)
-    return render_template('index.html', reply=reply, img_visibility=" visible")
+    # RPS Image CSS properties
+    cp1 = game.clip_path(player1)
+    ml1 = game.margin_left(player1)
+    mt1 = game.margin_top(player1)
+    cp2 = game.clip_path(player2)
+    ml2 = game.margin_left(player2)
+    mt2 = game.margin_top(player2)
+    return render_template('index.html', reply=reply, cp1=cp1, ml1=ml1, mt1=mt1, cp2=cp2, ml2=ml2, mt2=mt2)
 
 # Play Against Computer Page
 @app.route('/play-cpu')
@@ -35,9 +42,14 @@ def play_rps_cpu():
     player2 = Player('Computer', (["rock","paper","scissors"])[randrange(0, 3)])
     game = Game(player1, player2)
     reply = game.play_new_game(player1, player2)
-    hand_icon1 = game.select_icon(player1)
-    # hand_icon2 = game.select_icon(player2)
-    return render_template('play-cpu.html', reply=reply, img_visibility=" visible", hand_icon1=hand_icon1)
+    # RPS Image CSS properties
+    cp1 = game.clip_path(player1)
+    ml1 = game.margin_left(player1)
+    mt1 = game.margin_top(player1)
+    cp2 = game.clip_path(player2)
+    ml2 = game.margin_left(player2)
+    mt2 = game.margin_top(player2)
+    return render_template('play-cpu.html', reply=reply, cp1=cp1, ml1=ml1, mt1=mt1, cp2=cp2, ml2=ml2, mt2=mt2)
 
 # URL Form Page
 @app.route('/<hand1>/<hand2>', methods=['GET'])

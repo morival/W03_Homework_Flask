@@ -6,7 +6,16 @@
             .hand-img {
                 visibility:{{ img_visibility }};
             }
-            {{ hand_icon1 }}
+            #hand1 {    
+                clip-path: inset({{ cp1 }});
+                margin-left: {{ ml1 }};
+                margin-top: {{ mt1 }};
+            }
+            #hand2 {
+                clip-path: inset({{ cp2 }});
+                margin-left: {{ ml2 }};
+                margin-top: {{ mt2 }};
+            }
         </style>
     </head>
     <body>

@@ -24,9 +24,15 @@
         <input class="btn" type="submit" value="Play!">
     </form>
     <div class="result-container">
-        <!-- <img class="hand-img"  src="/static/images/rock-paper-scissors.png" alt="Player 1 Hand"> -->
-        <h2>{{ reply }}</h2>
-        <!-- <img class="hand-img"  src="/static/images/rock-paper-scissors.png" alt="Player 2 Hand"> -->
+        <div class="img-container">
+            <img class="hand-img" id="hand1" src="/static/images/rock-paper-scissors.png" alt="Player 1 Hand">
+        </div>
+        <div class="reply">
+            <h2 >{{ reply }}</h2>
+        </div>
+        <div class="img-container">
+            <img class="hand-img" id="hand2" src="/static/images/rock-paper-scissors.png" alt="Player 2 Hand">
+        </div>
     </div>
 </div>
 {% endblock %}
