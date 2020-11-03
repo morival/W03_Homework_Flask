@@ -65,6 +65,42 @@ select {
 .btn:hover {
     background-color: rgb(81, 119, 157);
 }
+/* results */
+.result-container {
+    display: flex;
+    position: relative;
+    height: 250px;
+    width: 820px;
+}
+.img-container {
+    flex-direction: row;
+    height: 250px;
+    width: 260px;
+}
+.reply {
+    position: relative;
+    flex-direction: row;
+    width:300px;
+}
+#hand1 {
+    position: absolute;
+    /* Paper */
+    clip-path: inset(24% 33.55% 10% 34%);
+    margin-left: -248px;
+    margin-top: -70px;
+}
+#hand2 {
+    position: relative;
+    /* Rock */
+    clip-path: inset(7% 67% 27% 0%);
+    margin-left: -4px;
+    margin-top: -13px;
+    /* Scissors */
+    /* clip-path: inset(7% 2% 27% 65%);
+    margin-left: -500px;
+    margin-top: -13px; */
+    flex-direction: row;
+}
 footer {
     height: 150px;
     background-color: beige;

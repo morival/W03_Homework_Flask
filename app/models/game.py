@@ -21,6 +21,7 @@ class Game:
         return "Tie Game!"
         
     def play_new_game(self, player1, player2):
+        
         # game_map = {0:"rock", 1:"paper", 2:"scissors"}
         rps_table = [[None, 1, 0], [1, None, 2],[0, 2, None]]
         winner = rps_table[self.player_move(player1.choice)][self.player_move(player2.choice)]
@@ -32,6 +33,8 @@ class Game:
         else:
             return self.tie()
 
-    
+    def select_icon(self, player):
+        player.choice
+        return "header > h1 {color: hotpink;}"
 
     

@@ -4,7 +4,7 @@
 <div class="container">
     <form action="/play-rps" method="POST">
         <section>
-            <label for="player1">Player 1 Name</label>
+            <label for="player1">Name</label>
             <input class="player-input" type="text" name="player1" value="Player 1" id="player1">
             <select name="choice1" id="choice1">
                 <option value="rock">Rock</option>
@@ -13,7 +13,7 @@
             </select>
         </section>
         <section>
-            <label for="player2">Player 2 Name</label>
+            <label for="player2">Name</label>
             <input class="player-input" type="text" name="player2" value="Player 2" id="player2">
             <select name="choice2" id="choice2">
                 <option value="rock">Rock</option>
@@ -24,7 +24,9 @@
         <input class="btn" type="submit" value="Play!">
     </form>
     <div class="result-container">
+        <!-- <img class="hand-img"  src="/static/images/rock-paper-scissors.png" alt="Player 1 Hand"> -->
         <h2>{{ reply }}</h2>
+        <!-- <img class="hand-img"  src="/static/images/rock-paper-scissors.png" alt="Player 2 Hand"> -->
     </div>
 </div>
 {% endblock %}

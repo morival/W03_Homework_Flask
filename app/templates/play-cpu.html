@@ -4,8 +4,8 @@
 <div class="container">
     <form action="/play-rps-cpu" method="POST">
         <section>
-            <label for="player1">Player 1</label>
-            <input type="text" name="player1" value="Player 1" id="player1">
+            <label for="player1">Name</label>
+            <input class="player-input" type="text" name="player1" value="Player 1" id="player1">
             <select name="choice1" id="choice1">
                 <option value="rock">Rock</option>
                 <option value="paper">Paper</option>
@@ -21,7 +21,15 @@
     </form>
     
     <div class="result-container">
-        <h2>{{ reply }}</h2>
+        <div class="img-container">
+            <img class="hand-img" id="hand1" src="/static/images/rock-paper-scissors.png" alt="Player 1 Hand">
+        </div>
+        <div class="reply">
+            <h2 >{{ reply }}</h2>
+        </div>
+        <div class="img-container">
+            <img class="hand-img" id="hand2" src="/static/images/rock-paper-scissors.png" alt="Player 2 Hand">
+        </div>
     </div>
 </div>
 {% endblock %}
